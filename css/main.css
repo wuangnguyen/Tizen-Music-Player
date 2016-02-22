@@ -421,7 +421,7 @@ nav>ul>li a span.fa {
 
 .list-song {
     font-family: proxima_nova_rgregular,arial;
-    border-left: 1px solid #fff;
+    border-left: 1px solid #2f2f2f;
     width: 100%;
     padding-top: 15px;
 }
@@ -437,6 +437,7 @@ nav>ul>li a span.fa {
 .list-songs {
     margin-top: 15px;
     width: 100%;
+    margin-left: 5px; 
 }
 
 .transparent_img {
