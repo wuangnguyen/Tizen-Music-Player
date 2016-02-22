@@ -4,7 +4,7 @@ $(document).ready(function() {
         $(this).attr("id", "owl-carousel-" + carouselCount);
         var owl = $('#owl-carousel-' + carouselCount);
         owl.owlCarousel({
-            items : 10,
+            items : 5,
 			lazyLoad : true,
 			navigation : false,
 			pagination : false
