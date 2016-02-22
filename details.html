@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style type="text/css">
+        .audio {
+            margin-top: 20px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Add your site or application content here -->
+    <div class="container">
+        <!-- menu left -->
+        <nav id="menu_left" class="fl">
+            <ul>
+                <li class="active" id="lm1"><a href="javascript:void(0)"><span class="fa fa-home"></span>Home</a></li>
+                <li id="lm2">
+                    <a href="javascript:void(0)">
+                        <span class="fa fa-bookmark"></span><span>upgrade</span>
+                    </a>
+                </li>
+                <li id="lm3"><a href="javascript:void(0)"><span class="fa fa-search"></span>Radio</a></li>
+                <li id="lm10"><a href="javascript:void(0)"><span class="fa fa-cab"></span>Discover</a></li>
+                <li id="lm4"><a href="javascript:void(0)"><span class="fa fa-music"></span>browse</a></li>
+                <li id="lm5"><a href="javascript:void(0)"><span class="fa fa-bus"></span>favorites</a></li>
+                <li id="lm8"><a href="javascript:void(0)"><span class="fa fa-camera"></span>Playlists</a></li>
+            </ul>
+        </nav>
+        <!-- end menu left -->
+        <!-- right contanier -->
+        <div id="right-coontainer" class="container fr">
+                        <div class="transparent_img" style="clip: rect(0px 1400px 1200px 0px);"></div>
+            <div class="top-title">
+                <h1>Tizen Music Player</h1>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="song-active">
+                        <div class="song-img">
+                            <img src="img/notes.jpg" />
+                            <audio class="audio" autoplay="autoplay" controls>
+                                <!--<source src="horse.ogg" type="audio/ogg">-->
+                                <source src="media/song1.mp3" type="audio/mp3">
+                            </audio>
+                            <div class="button-song">
+                                <a href="#"><span class="fa fa-fast-backward"></span></a>
+                                <a href="#"><span class="fa fa-play"></span></a>
+                                <a href="#"><span class="fa fa-fast-forward "></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="list-song">
+                        <div class="list-active">
+                            <a href="#">
+                                <img src="img/notes.jpg" /></a>
+                        </div>
+                        <ul class="list-songs">
+                            <li class="active"><a href="#"><span class="fa fa-pause-circle-o"></span><strong>Soch Na Sake</strong></a></li>
+                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Dil Cheez Tujhe Dedi</strong></a></li>
+                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Mera Nachan Nu</strong></a></li>
+                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Suno- Na Sangemarmar</strong></a></li>
+                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Kabhi Jo Baadal Barse</strong></a></li>
+                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Phir Mohabbat</strong></a></li>
+                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Chahun Main Ya Naa</strong></a></li>
+                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Chahun Main Ya Naa</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end right container -->
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
