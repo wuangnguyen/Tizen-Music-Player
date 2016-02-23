@@ -16,11 +16,15 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="css/ableplayer.css" type="text/css" />
+    <!-- Additional CSS for Playlist -->
+    <link rel="stylesheet" href="css/ableplayer-playlist.css" type="text/css" />
     <style type="text/css">
-        .audio {
-            margin-top: 20px;
-            width: 500px;
-        }
+    .audio {
+        margin-top: 20px;
+        width: 500px;
+    }
     </style>
 </head>
 
@@ -49,7 +53,7 @@
         <!-- end menu left -->
         <!-- right contanier -->
         <div id="right-coontainer" class="container fr">
-                        <div class="transparent_img" style="clip: rect(0px 1400px 1200px 0px);"></div>
+            <div class="transparent_img" style="clip: rect(0px 1400px 1200px 0px);"></div>
             <div class="top-title">
                 <h1>Tizen Music Player</h1>
             </div>
@@ -58,15 +62,9 @@
                     <div class="song-active">
                         <div class="song-img">
                             <img src="img/notes.jpg" />
-                            <audio class="audio" autoplay="autoplay" controls>
-                                <!--<source src="horse.ogg" type="audio/ogg">-->
-                                <source src="media/song1.mp3" type="audio/mp3">
-                            </audio>
-                            <div class="button-song">
-                                <a href="#"><span class="fa fa-fast-backward"></span></a>
-                                <a href="#"><span class="fa fa-play"></span></a>
-                                <a href="#"><span class="fa fa-fast-forward "></span></a>
-                            </div>
+                        </div>
+                        <div class="audio-player-container">
+                            <audio id="audio1" preload="auto" width="500" autoplay="true" data-able-player></audio>
                         </div>
                     </div>
                 </div>
@@ -76,16 +74,26 @@
                             <a href="#">
                                 <img src="img/notes.jpg" /></a>
                         </div>
-                        <ul class="list-songs">
-                            <li class="active"><a href="#"><span class="fa fa-pause-circle-o"></span><strong>Soch Na Sake</strong></a></li>
-                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Dil Cheez Tujhe Dedi</strong></a></li>
-                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Mera Nachan Nu</strong></a></li>
-                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Suno- Na Sangemarmar</strong></a></li>
-                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Kabhi Jo Baadal Barse</strong></a></li>
-                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Phir Mohabbat</strong></a></li>
-                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Chahun Main Ya Naa</strong></a></li>
-                            <li><a href="#"><span class="fa fa-play-circle-o"></span><strong>Chahun Main Ya Naa</strong></a></li>
+                        <ul class="able-playlist list-songs" data-player="audio1">
+                            <li data-mp3="media/everyday.mp3" data-ogg="media/everyday.ogg">Every Day</li>
+                            <li data-mp3="media/paulallen.mp3" data-ogg="media/paulallen.ogg">The Paul Allen Song</li>
+                            <li data-mp3="media/php70alpha.mp3" data-ogg="media/php70alpha.ogg">PHP 7.0 Alpha</li>
+                            <li data-mp3="media/frenchsong.mp3" data-ogg="media/frenchsong.ogg" lang="fr">Une Chanson Française</li>
+                            <li data-mp3="media/smallf.mp3" data-ogg="media/smallf.ogg">Man With Small F (The Inaccessible PDF Song)</li>
+                            
                         </ul>
+                        <p>
+                            <pre>
+                                Ctr + Alt +
+                                    p or spacebar = Play/Pause
+                                    s = Stop
+                                    r = Rewind 10 seconds
+                                    f = Forward10 seconds
+                                    m = Mute
+                                    u or 1-5 = Volume Up
+                                    d or 1-5 = Volume Down
+                            </pre>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -94,8 +102,11 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
     </script>
+    <script src="js/vendor/js.cookie.js"></script>
+    <!-- Able Player JavaScript -->
+    <script src="js/vendor/ableplayer.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 </body>

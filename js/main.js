@@ -30,4 +30,8 @@ $(document).ready(function() {
     	});
     	$this.addClass("active");
     });
+    $("#menu_left ul li.active a").focus();
+    $("body").bind("keyup",function(e){
+    	console.log(e.keyCode);
+	});
 });
