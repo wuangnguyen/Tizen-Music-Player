@@ -234,7 +234,7 @@ nav>ul>li a span.fa {
     position: relative;
 }
 .card_layout ul li {
-    width: 250px;
+    width: 200px;
     display: inline-block;
     margin-left: -4px;
     vertical-align: top;
@@ -258,9 +258,11 @@ nav>ul>li a span.fa {
 .card_layout ul li div.card_layout_data .arwtork_label {
     padding: 9px 10px 10px;
     width: auto;
-    border-top: 1px solid #4b4b4b;
+    border: 1px solid #2f2f2f;
+    border-top:none;
     position: relative;
     height: 50px;
+    width: calc(100% - 20px);
 }
 .card_layout ul li div.card_layout_data div img {
     display: block;
@@ -271,8 +273,13 @@ nav>ul>li a span.fa {
 .hover-events-parent {
     position: relative;
     cursor: pointer;
+    border: 1px solid #2f2f2f;
+    border-bottom: none;
 }
-.hover-events-parent:hover .hover-activity {
+.carousel .card_layout ul li:hover .arwtork_label, .carousel .card_layout ul li:hover .hover-events-parent {
+    border-color: #fff;
+}
+.hover-events-parent:hover .hover-activity, .hover-events-parent:active .hover-activity {
     display: block !important;
 }
 .arwtork_label {
@@ -352,12 +359,14 @@ nav>ul>li a span.fa {
     line-height: 33px;
     text-align: center;
     color: #fff;
+    font-size: 33px;
+    line-height: 33px;
 }
 .slide-navigation{
     display: inline-block;
     margin: 0 auto;
 }
-.slide-navigation a{
+.slide-navigation button{
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -365,6 +374,9 @@ nav>ul>li a span.fa {
     line-height: 25px;
     text-align: center;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #fff;
 }
 .top-title{
     padding: 9px 20px 0;
