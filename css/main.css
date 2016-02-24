@@ -110,10 +110,10 @@ html, body, div, p, ul, li, h1, h2, h3, h4, h5, h6, ol, img, input, select, text
     outline: 0;
     border: 0;
     text-decoration: none;
-    list-style: none;
+    list-style: none;font-family: "Pacifico", Georgia, "Times New Roman", serif;
 }
 body{
-    font-family: proxima_nova_rgregular, arial, sans-serif;
+    
     background: #222222;
     color: #e4e4e4;
 }
@@ -184,7 +184,8 @@ nav>ul>li a {
     background: #151515;
     display: block;
     color: #e4e4e4;
-    font-family: proxima_novalight;
+    
+    
     padding: 0;
     text-transform: capitalize;
     font-size: 94%;
@@ -702,3 +703,129 @@ nav>ul>li a span.fa {
         page-break-after: avoid;
     }
 }
+
+.circle_layout {
+    width: 100%;
+    overflow: hidden;
+    padding: 1px
+}
+
+.circle_layout ul.carousel_ul {
+    width: 15000px;
+    position: relative
+}
+
+.circle_layout ul li {
+    width: 150px;
+    display: inline-block;
+    margin-left: -4px;
+    vertical-align: top
+}
+
+.carousel .circle_layout ul li:first-of-type {
+    margin-left: 0
+}
+
+.circle_layout ul li div.circle_layout_data {
+    margin-right: 20px
+}
+
+.circle_layout ul li div.card_layout_data {
+    background: 0 0
+}
+
+.circle_layout ul li div.circle_layout_data>div.hover-events-parent {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%
+}
+
+.circle_layout ul li div.circle_layout_data div,
+.circle_layout ul li div.circle_layout_data div img {
+    width: 100%
+}
+
+.circle_layout ul li div.circle_layout_data div img {
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    opacity: .6!important
+}
+
+.circle_layout ul li div.circle_layout_data div a:hover img {
+    opacity: 1!important
+}
+
+.circle_layout ul li div.circle_layout_data>a {
+    display: block;
+    width: 100%
+}
+
+.circle_layout ul li div.circle_layout_data .arwtork_label {
+    padding: 10px;
+    width: auto;
+    text-align: center;
+    position: relative;
+    top: -50%
+}
+
+.circle_layout ul li div.circle_layout_data .artist-name {
+    font-size: 120%;
+    color: #fdc500;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 120px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%)
+}
+
+.circle_layout ul li div.circle_layout_data span.album-name {
+    font-size: 100%;
+    color: #999;
+    text-transform: capitalize
+}
+
+.circle_layout ul li div.circle_layout_data:hover a.album-name {
+    color: #fff
+}
+
+.label-name {
+    color: #fff;
+    font-size: 140%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: block;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-weight: 400;
+    white-space: normal;
+    width: 90%
+}
+
+.dotes {
+    text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block
+}
+
