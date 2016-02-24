@@ -388,15 +388,14 @@ nav>ul>li a span.fa {
 /*end categories container*/
 /*detail page*/
 .audio-player-container{
-    position: relative;
-    width: 500px;
-    min-height: 200px;
-    margin: 10px auto;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
 }
 .row {
     width: 100%;
-    margin-left: -10px;
-    margin-right: -10px;
+    position: relative;
+    clear: both;
 }
 
 .col-6 {
@@ -420,7 +419,9 @@ nav>ul>li a span.fa {
 }
 
     .song-img img {
-        width: 500px;
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
     }
 
 .button-song {
@@ -454,9 +455,7 @@ nav>ul>li a span.fa {
         }
 
 .list-songs {
-    margin-top: 15px;
-    width: 100%;
-    margin-left: 5px; 
+    padding: 0 10px; 
 }
 
 .transparent_img {
@@ -465,7 +464,8 @@ nav>ul>li a span.fa {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/artwork.jpg);
+    /*background-image: url(../img/artwork.jpg);*/
+    background-image: url(https://i.ytimg.com/vi/Fwy4fPoInH4/maxresdefault.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%!important;
     opacity: .3!important;
@@ -711,7 +711,6 @@ nav>ul>li a span.fa {
 }
 
 .circle_layout ul.carousel_ul {
-    width: 15000px;
     position: relative
 }
 

@@ -25,9 +25,7 @@
 */
 .able { 
   position: relative;
-  margin: 1em 0;
   width: 100%; /* will be changed dynamically as player is contructed */
-  box-shadow: 0px 0px 16px #262626;
   z-index: 100; 
 }
 .able-column-left {
@@ -206,7 +204,7 @@
   display: inline-block;
   position: relative;
   left: 0;
-  top: -4px;
+  top: -8px;
   border: 1px solid;
   background-color: #FDFDFD;
   z-index: 300;

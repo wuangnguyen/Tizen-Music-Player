@@ -256,7 +256,7 @@
 
     // Default video height and width 
     // Can be overwritten with height and width attributes on HTML <video> element
-    this.playerWidth = 480;
+    this.playerWidth = $(".row:first").width();
     this.playerHeight = 360; 
 
     // Button color 
