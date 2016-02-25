@@ -175,7 +175,12 @@ nav>ul>li.active a {
     opacity: 1;
     filter: alpah(opacity=100);
 }
-nav>ul>li:hover a {
+nav>ul>li:hover a{
+    border-left-color: #ff3e18;
+    opacity: 1;
+    filter: alpah(opacity=100);
+}
+nav>ul>li a:focus {
     border-left-color: #ff3e18;
     opacity: 1;
     filter: alpah(opacity=100);

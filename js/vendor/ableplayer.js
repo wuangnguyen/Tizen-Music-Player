@@ -3366,16 +3366,16 @@
   AblePlayer.prototype.calculateControlLayout = function () {
     // Removed rewind/forward in favor of seek bar.
     var controlLayout = {
-      'ul': ['play','stop'],
-      'ur': [],
+      'ul': [],
+      'ur': ['previous','play','stop','next'],
       'bl': [],
       'br': []
     }
         
     if (this.useSlider) {
-      controlLayout['ur'].push('rewind');
-      controlLayout['ur'].push('seek');
-      controlLayout['ur'].push('forward');
+      controlLayout['ul'].push('rewind');
+      controlLayout['ul'].push('seek');
+      controlLayout['ul'].push('forward');
     }
     
     // Calculate the two sides of the bottom-left grouping to see if we need separator pipe.
@@ -5776,6 +5776,41 @@
     return width;
   };
 
+  AblePlayer.prototype.handlePrevious = function(e) {
+    if (this.hasPlaylist) { 
+      if (this.playlistIndex === 0) { 
+        // this is the last track in the playlist
+        this.playlistIndex = this.$playlist.length - 1;              
+        this.swapSource(this.playlistIndex);        
+      }
+      else { 
+        // this is not the last track. Play the next one. 
+        this.playlistIndex--;
+        if(this.playlistIndex < 0){
+          this.playlistIndex = 0;
+        }
+        this.swapSource(this.playlistIndex)
+      }
+    }
+    this.refreshControls();
+  };
+
+  AblePlayer.prototype.handleNext = function(e) { 
+    if (this.hasPlaylist) { 
+      if (this.playlistIndex === (this.$playlist.length - 1)) { 
+        // this is the last track in the playlist
+        this.playlistIndex = 0;              
+        this.swapSource(0);           
+      }
+      else { 
+        // this is not the last track. Play the next one. 
+        this.playlistIndex++;
+        this.swapSource(this.playlistIndex)
+      }
+    }
+    this.refreshControls();
+  };
+
   AblePlayer.prototype.handlePlay = function(e) { 
     if (this.isPaused()) {
       this.playMedia();
@@ -7240,6 +7275,12 @@ console.log('inside resizePlayer...');
     }
     else if (whichButton === 'volume-down') { 
       this.handleVolume('down');
+    }
+    else if (whichButton === 'previous') { 
+      this.handlePrevious();
+    }
+    else if (whichButton === 'next') { 
+      this.handleNext();
     }
     else if (whichButton === 'faster') {
       this.handleRateIncrease();

@@ -109,10 +109,12 @@
     vertical-align: middle;
 }
 .able-left-controls { 
-  float: left;
+  /*float: left;*/
+  display: block;
 }
-.able-right-controls { 
-  float: right;
+.able-right-controls {
+  text-align: center;
+  display: block;
 }
 .able-left-controls span,
 .able-right-controls span {
@@ -126,7 +128,7 @@
   margin: 0;
   padding: 0;
   color: #fdfdfd;
-  min-width: 20px;
+  min-width: 30px;
   overflow: hidden !important;
   z-index: 1950;
 }
@@ -588,7 +590,19 @@ fieldset.able-prefs-captions select {
 .icon-sign:before {
 	content: "\e60a";
 }
-
+button.able-button-handler-previous, button.able-button-handler-next{
+  height: 29px;
+  vertical-align: top;
+  margin: 0 2px;
+}
+.icon-previous:before {
+  content: "\f048";
+  font-family: "FontAwesome";
+}
+.icon-next:before {
+  content: "\f051";
+  font-family: "FontAwesome";
+}
 /* 
   Fullscreen settings 
   In v2.2.4b commented out :-webkit-full-screen style 
