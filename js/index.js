@@ -1,11 +1,11 @@
-var itemToShow = 5;
+var itemToShow = 6;
 $(document).ready(function(){
     var carouselCount = 0;
     $(".owl-carousel").each(function() {
         $(this).attr("id", "owl-carousel-" + carouselCount);
         var owl = $('#owl-carousel-' + carouselCount);
         if($(this).hasClass("circle")){
-            itemToShow = 7;
+            itemToShow = 8;
         }
         owl.owlCarousel({
             items: itemToShow,
@@ -103,4 +103,5 @@ $(document).ready(function(){
             break;
         }
     });
+    $(".owl-carousel .owl-item:first").focus();
 });
