@@ -362,7 +362,7 @@ a:active, a:hover, a:focus{
 .song-img {
     width: 100%;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .song-img img {
@@ -388,21 +388,14 @@ a:active, a:hover, a:focus{
 }
 
 .list-song {
-    font-family: proxima_nova_rgregular,arial;
     width: 100%;
-    padding-top: 15px;
-}
-
-.list-song .list-active {
-    padding-left: 25px;
-}
-
-.list-song .list-active img {
-    width: 200px;
+    padding-top: 10px;
 }
 
 .list-songs {
-    padding: 0 10px; 
+    padding: 0 10px;
+    overflow: auto;
+    max-height: 400px;
 }
 
 .transparent_img {
