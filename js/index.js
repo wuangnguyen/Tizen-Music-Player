@@ -1,11 +1,11 @@
-var itemToShow = 6;
+var itemToShow = 5;
 $(document).ready(function(){
     var carouselCount = 0;
     $(".owl-carousel").each(function() {
         $(this).attr("id", "owl-carousel-" + carouselCount);
         var owl = $('#owl-carousel-' + carouselCount);
         if($(this).hasClass("circle")){
-            itemToShow = 8;
+            itemToShow = 7;
         }
         owl.owlCarousel({
             items: itemToShow,
