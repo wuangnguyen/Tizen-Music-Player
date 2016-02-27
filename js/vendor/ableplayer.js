@@ -3367,7 +3367,7 @@
     // Removed rewind/forward in favor of seek bar.
     var controlLayout = {
       'ul': [],
-      'ur': ['previous','play','stop','next'],
+      'ur': ['previous','play','next'],
       'bl': [],
       'br': []
     }
