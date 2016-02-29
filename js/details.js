@@ -20,14 +20,11 @@ $(document).ready(function(){
             case 39:
             case 40:
                 findNextTabStop(activeNode).focus();
-                break;
+            break;
             case 37:
             case 38:
                 findPreviousTabStop(activeNode).focus();
-                break;
-            case 13:
-                activeNode.click();
-                break;
+            break;
         }
     });
 });
